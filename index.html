@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="Chart.js"> </script>
 </head>
 <body>    
         <header>
@@ -48,22 +49,36 @@
                     <div class="indicador">IVP</div>
                     <div class="indicador">IMACEC</div>                  
 
-                    <select name="select" id="combobox">
-                        <option value="uf">UF</option>
-                        <option value="utm">UTM</option>
-                        <option value="dlo">DLO</option>
-                        <option value="dla">DLA</option>
-                        <option value="eur">EUR</option>
-                        <option value="ipc">IPC</option>
-                        <option value="ivp">IVP</option>
-                        <option value="imacec">IMACEC</option>
+                    <select name="select" id="combobox"  onchange="showChart()">
+                        <option value="">Seleccionar</option>
+                        <option value="uf1">UF</option>
+                        <option value="utm2">UTM</option>
+                        <option value="dlo3">DLO</option>
+                        <option value="dla4">DLA</option>
+                        <option value="eur5">EUR</option>
+                        <option value="ipc6">IPC</option>
+                        <option value="ivp7">IVP</option>
+                        <option value="imacec8">IMACEC</option>
                     </select>
                     <button type="submit" id="enviar">Submit</button>
                 </form>                
             </div>      
 
+            <div>
+                <canvas id="uf"  width="100"  height="40"></canvas>
+            </div>
+
+            <div>
+                <canvas id="utm"  width="100"  height="40"></canvas>
+            </div>
+
+            <div>
+                <canvas id="ipc"  width="100"  height="40"></canvas>
+            </div>
+           
+           
         </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./indicadores.js" type="module"></script>
 </body>
 </html>

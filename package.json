@@ -1,0 +1,21 @@
+{
+  "type": "module",
+  "name": "proy_dashboard",
+  "version": "1.0.0",
+  "description": "Proyecto dashboard Bootcamp DWFS UDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fernandojmo/proy_dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fernandojmo/proy_dashboard/issues"
+  },
+  "homepage": "https://github.com/Fernandojmo/proy_dashboard#readme"
+}

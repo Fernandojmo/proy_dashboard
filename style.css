@@ -1,0 +1,129 @@
+/*barra navegacion clara*/
+
+
+#navlight{
+    
+    background-color: white;
+    height:50px ;
+    padding:10px;
+}
+
+#div-black{
+
+    width: 30px;
+    height:30px;
+    background-color: #000080;
+    display:inline-block;
+}
+
+#div-violet{
+    width: 30px;
+    height:30px;
+    background-color: #6105A0;
+    display:inline-block;
+}
+
+#div-lightblue{
+    width: 30px;
+    height:30px;
+    background-color: #1459B8;
+    display:inline-block;
+}
+
+#div-calypso{
+    width: 30px;
+    height:30px;
+    background-color: #14B8A9;
+    display:inline-block;
+}
+#div-green{
+    width: 30px;
+    height:30px;
+    background-color: #21A96B;
+    display:inline-block;
+}
+#div-yellow{
+    width: 30px;
+    height:30px;
+    background-color: #F6CC0E ;
+    display:inline-block;
+}
+
+/*barra navegacion oscura */
+#navdark{
+    background-color: #000080;
+    height:100px;
+    border: 2px solid red;
+    padding: 10px;
+    
+}
+
+#navtext{
+    padding: 1rem;
+    text-align: center;
+    color: #F6CC0E;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
+
+#paragraph-one{
+    color: #160456;
+    font-size: 1.5rem;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+}
+#paragraph-two{
+    font-size: 1rem;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:center;
+    padding: 1rem;
+    background-color: #F6CC0E;
+
+    
+}
+
+.indicador{
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    color: black;
+    padding-left: 5rem;
+    padding-top: 1rem;
+    padding-right: 5rem;    
+    padding-bottom: 1rem;
+    margin: 2rem; 
+    background-color:#1459B8 ;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+
+#combobox{
+    display: inline-block;
+    width: 250px;
+    height: 30px;
+    background-color:#14B8A9 ;
+    border-radius: 0.75rem;
+    margin-left: 20rem;
+   
+}
+
+#enviar{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background-color: #14B8A9;
+    border-radius:1rem ;
+    margin-left: 1rem;
+}
