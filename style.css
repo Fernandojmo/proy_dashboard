@@ -1,3 +1,90 @@
-h1{
-    font-family: Arial, Helvetica, sans-serif;
-}
+* {
+    background-color: none;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  #header {
+    text-align: center;
+    background-color: #0b0f2c;
+    padding: 2rem;
+  }
+  #header > h1 {
+    color: #ffc04a;
+  }
+  #intro {
+    padding: 2rem;
+    background-color: greenyellow;
+  }
+  #intro > h2 {
+    color: #3e4891;
+  }
+  #intro > p {
+    margin-top: 0.5rem;
+    text-align: justify;
+  }
+  #list1 {
+    background-color: aqua;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .box {
+    padding: 1rem;
+    background-color: blue;
+    width: 15%;
+  }
+  
+  .box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  
+  .logo {
+    grid-area: 1 / 1 / 3 / 2;
+  }
+  .titulo {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .valor {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  
+  #selectform {
+    text-align: center;
+    padding: 1rem;
+    background-color: crimson;
+  }
+  #selectform > form > select {
+    width: 20rem;
+    min-width: 10rem;
+  }
+  #selectform > form > button {
+    width: 5rem;
+  }
+  #graphsection {
+    background-color: darkcyan;
+    text-align: center;
+    padding: 1rem;
+  }
+  #graphtitle {
+    padding: 1rem;
+  }
+  #graphbox {
+    background-color: darkred;
+    padding: 10rem;
+    margin: 1rem;
+  }
+  #footer {
+    padding: 4rem;
+    background-color: darksalmon;
+  }
+  
