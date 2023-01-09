@@ -1,6 +1,3 @@
-// import grafico from './graph'
-// grafico('uf');
-
 async function grafico(indicador) {
     try {
         const url = `https://mindicador.cl/api/${indicador}`;
@@ -8,21 +5,17 @@ async function grafico(indicador) {
         const index = await response.json();
         console.log(index);
         console.log("fetch exitoso");
-        const fechas = await index.serie.map(x=>(x.fecha))
-        const valores = await index.serie.map(x=>x.valor)
-        console.log("aqui valores:")
-        console.log(valores);
+            
+        const canvas = document.getElementById('mychart')
 
-
-        const canvas = await document.getElementById('mychart')        
-        const grafico1 = await new Chart(canvas,{
-            type: 'line',
+        const grafico1 = new Chart(canvas,{
+            type: 'bar',
             data:{
-                labels: fechas,
+                labels:['Red','Blue','Yellow'],
                 datasets:[
                     {
-                        label: `${indicador}`,
-                        data: valores,
+                        label:'Colores',
+                        data:[index.serie.valor],
                         backgroundColor:[
                             'rgba(255,99,132,0.2)',
                             'rgba(54,162,235,0.2)',
@@ -37,7 +30,7 @@ async function grafico(indicador) {
             options: {
                 scales: {
                     y: {
-                        beginAtZero: false
+                        beginAtZero: true
                     }
                 }
             }
@@ -48,18 +41,6 @@ async function grafico(indicador) {
       console.log("Error");
     }
   }
-
-grafico('uf');
-
-
-
-
-
-// import indexs from './modulo'
-// indexs();
-
-
-
-
-
-
+  
+//   grafico('uf');
+export default grafico();

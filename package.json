@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Fernandojmo/proy_dashboard/issues"
   },
-  "homepage": "https://github.com/Fernandojmo/proy_dashboard#readme"
+  "homepage": "https://github.com/Fernandojmo/proy_dashboard#readme",
+  "dependencies": {
+    "chart.js": "^4.1.2"
+  }
 }
