@@ -58,20 +58,21 @@ async function getIndicadorIpc(){
 
 }
 
+
 function showChart(){
     getSelectValue = document.getElementById("combobox").value;
     if(getSelectValue==="uf1"){
-        document.getElementById("uf").style.display = "inline-block";
-        document.getElementById("utm").style.display = "none";
-        document.getElementById("ipc").style.display = "none";
+        document.getElementById("uf1").style.display = "inline-block";
+        document.getElementById("utm2").style.display = "none";
+        document.getElementById("ipc6").style.display = "none";
       }else if(getSelectValue==="utm2"){
-        document.getElementById("uf").style.display = "none";
-        document.getElementById("utm").style.display = "inline-block";
-        document.getElementById("ipc").style.display = "none";
+        document.getElementById("uf1").style.display = "none";
+        document.getElementById("utm2").style.display = "inline-block";
+        document.getElementById("ipc6").style.display = "none";
       }else if(getSelectValue==="ipc6"){
-        document.getElementById("uf").style.display = "none";
-        document.getElementById("utm").style.display = "none";
-        document.getElementById("ipc").style.display = "inline-block";
+        document.getElementById("uf1").style.display = "none";
+        document.getElementById("utm2").style.display = "none";
+        document.getElementById("ipc6").style.display = "inline-block";
   
     }
 }
