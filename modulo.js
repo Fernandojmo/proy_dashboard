@@ -101,4 +101,5 @@ async function indicadores() {
       console.log("Error");
     }
   }
-export default indicadores();
+
+export default indicadores;

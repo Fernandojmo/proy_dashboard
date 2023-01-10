@@ -5,17 +5,24 @@ async function grafico(indicador) {
         const index = await response.json();
         console.log(index);
         console.log("fetch exitoso");
-            
-        const canvas = document.getElementById('mychart')
+        const fechas = await index.serie.map(x=> moment(x.fecha).format('YYYY/MM/DD'))
+        const valores = await index.serie.map(x=>x.valor)
+        const valoresinv= await valores.reverse();
+        // const fechascorr= await fechas.map(x=> x);
+        console.log("aqui valores:");
+        console.log(fechas);
 
-        const grafico1 = new Chart(canvas,{
-            type: 'bar',
+
+
+        const canvas = await document.getElementById('mychart')        
+        const grafico1 = await new Chart(canvas,{
+            type: 'line',
             data:{
-                labels:['Red','Blue','Yellow'],
+                labels: fechas,
                 datasets:[
                     {
-                        label:'Colores',
-                        data:[index.serie.valor],
+                        label: `${indicador}`,
+                        data: valoresinv,
                         backgroundColor:[
                             'rgba(255,99,132,0.2)',
                             'rgba(54,162,235,0.2)',
@@ -30,7 +37,7 @@ async function grafico(indicador) {
             options: {
                 scales: {
                     y: {
-                        beginAtZero: true
+                        beginAtZero: false
                     }
                 }
             }
@@ -41,6 +48,6 @@ async function grafico(indicador) {
       console.log("Error");
     }
   }
-  
-//   grafico('uf');
+
+grafico('uf');
 export default grafico();
