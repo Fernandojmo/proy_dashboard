@@ -1,8 +1,15 @@
-import indexs from './modulo.js'
-indexs();
 
-import grafico from './graph.js'
-grafico();
+// import indexs from './modulo.js'
+// indexs();
+
+// import grafico from './graph.js'
+// grafico('uf');
+
+import * as moment from './node_modules/moment/dist/moment.js'
+
+const nueva= (moment.moment().format('YYYY-MM-DD') + "T00:00:00.000Z");
+console.log(nueva)
+console.log(moment(nueva).format('YYYY/MM/DD'))
 
 // async function grafico(indicador) {
 //     try {

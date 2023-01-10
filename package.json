@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Fernandojmo/proy_dashboard#readme",
   "dependencies": {
     "chart.js": "^4.1.2",
+    "date-fns": "^2.29.3",
     "moment": "^2.29.4"
   }
 }
