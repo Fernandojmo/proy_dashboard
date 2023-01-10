@@ -1,9 +1,17 @@
 let  fechaArray = [], valorArray = [] // creamos estos array para guardar la informacion consumida relevante de la api, con motivo de llevarla a nuestro grafico
+const url = 'https://mindicador.cl/api'
+
+
+async function getIndicadores(){
+const fetchingData = await fetch(url)
+const data = await fetchingData.json()
+return data
+}
 
 /*Función para UF*/
 async function getIndicadorUf(){
-    const response =  await fetch('https://mindicador.cl/api/uf')// usamos fetch o axios para consumir nuestra api
-    const data = await response.json() // con fetch debemos pasar la informacion de json a js con el metodo json()
+const response =  await fetch('https://mindicador.cl/api/uf')// usamos fetch o axios para consumir nuestra api
+const data = await response.json() // con fetch debemos pasar la informacion de json a js con el metodo json()
 
 
  //Iteramos la info
@@ -37,15 +45,13 @@ async function getIndicadorUtm(){
 }
 
 
-
-
 /*Función para IPC*/
 let  fechaIpcArray = [], valorIpcArray = [] // creamos estos array para guardar la informacion consumida relevante de la api, con motivo de llevarla a nuestro grafico
 
 
-async function getIndicadorIpc(){
-    const response =  await fetch('https://mindicador.cl/api/ipc')// usamos fetch o axios para consumir nuestra api
-    const data = await response.json() // con fetch debemos pasar la informacion de json a js con el metodo json()
+  async function getIndicadorIpc(){
+  const response =  await fetch('https://mindicador.cl/api/ipc')// usamos fetch o axios para consumir nuestra api
+  const data = await response.json() // con fetch debemos pasar la informacion de json a js con el metodo json()
 
 
  //Iteramos la info
@@ -80,3 +86,5 @@ function showChart(){
   export {getIndicadorUf, fechaArray, valorArray}; // exportamos tanto los array como la funcion geData()
   export {getIndicadorUtm, fechaUtmArray, valorUtmArray};
   export {getIndicadorIpc, fechaIpcArray, valorIpcArray};
+  export {getIndicadores};
+  export const indicators_map = ['uf', 'ipc', 'utm', 'imacec', 'dolar_intercambio', 'ivp', 'dolar', 'euro']

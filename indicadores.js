@@ -1,12 +1,44 @@
 import {getIndicadorUf, fechaArray, valorArray} from "./index.js";
 import {getIndicadorUtm, fechaUtmArray, valorUtmArray} from "./index.js"; 
 import {getIndicadorIpc, fechaIpcArray, valorIpcArray} from "./index.js"; 
+import {getIndicadores, indicators_map} from "./index.js"; 
+
+
+async function displayIndicators(){
+    
+    // Array, lista con los id del span del html. 
+    const spanIndicadores = document.getElementsByClassName('indicador')
+    
+    //Trae los datos de la fecha actual convertidos a jason y los guarda en variable data
+    let data = await getIndicadores()
+    
+    //Recorro los datos de los span
+    for (let i = 0; i < spanIndicadores.length; i++) {
+        // i : numero. 
+
+        //Indicador map trae los valores de los indicadores de la api
+        const llave_del_indicador = indicators_map[i]
+
+
+        // Por indicador, ej: data['uf'] -> data
+        const data_por_indicador = data[llave_del_indicador]
+
+        // Dispplay, "pinta"
+        document.getElementById(llave_del_indicador).innerText = data_por_indicador.valor
+      }
+    }
+
+setTimeout( () => {
+
+    displayIndicators()
+}, 1000 )
+
 
 /*Este es el grafico 2 de indicador UF*/
 async function graficoUf(){ 
 
     await getIndicadorUf()
-    const canvas = document.getElementById('uf'); 
+    const canvas = document.getElementById('UF'); 
     const graficoUf = new Chart(canvas, { 
     
         type: 'line', 
@@ -36,7 +68,7 @@ graficoUf()
 async function graficoUtm(){ 
 
     await getIndicadorUtm()
-    const canvas = document.getElementById('utm'); 
+    const canvas = document.getElementById('UTM'); 
     const graficoUtm = new Chart(canvas, { 
         type: 'line', 
         
@@ -64,7 +96,7 @@ graficoUtm()
 async function graficoIpc(){ 
 
     await getIndicadorIpc()
-    const canvas = document.getElementById('ipc'); 
+    const canvas = document.getElementById('IPC'); 
     const graficoIpc = new Chart(canvas, { 
         type: 'line', 
         
