@@ -1,6 +1,6 @@
-import {getIndicadorUf, fechaArray, valorArray} from "./index.js";
+/*import {getIndicadorUf, fechaArray, valorArray} from "./index.js";
 import {getIndicadorUtm, fechaUtmArray, valorUtmArray} from "./index.js"; 
-import {getIndicadorIpc, fechaIpcArray, valorIpcArray} from "./index.js"; 
+import {getIndicadorIpc, fechaIpcArray, valorIpcArray} from "./index.js";*/
 import {getIndicadores, indicators_map} from "./index.js"; 
 
 
@@ -34,86 +34,52 @@ setTimeout( () => {
 }, 1000 )
 
 
-/*Este es el grafico 2 de indicador UF*/
-async function graficoUf(){ 
-
-    await getIndicadorUf()
-    const canvas = document.getElementById('UF'); 
-    const graficoUf = new Chart(canvas, { 
-    
-        type: 'line', 
-        
-        data:{
-            labels: fechaArray, 
-            datasets: [
-                {
-                    label: 'UF', 
-                    data: valorArray, 
-                    backgroundColor: 'rgb(75, 192, 192)',
-                },
-                
-            ]
-        },
-           
-    }) 
-
-}
-
-graficoUf()
 
 
-
-
-
-async function graficoUtm(){ 
-
-    await getIndicadorUtm()
-    const canvas = document.getElementById('UTM'); 
-    const graficoUtm = new Chart(canvas, { 
-        type: 'line', 
-        
-        data:{
-            labels: fechaUtmArray, 
-            datasets: [
-                {
-                    label: 'UTM', 
-                    data: valorUtmArray, 
-                    backgroundColor: 'rgb(75, 192, 192)',
-                },
-                
-            ]
-        },
-          
-    }) 
-
-}
-
-graficoUtm()
+import { cargarIndicadores } from "./index.js";
+  let miGrafico;
+  let elemento = document.getElementById("indicador");
+  let valorElemento = elemento.options[elemento.selectedIndex].value;
+  let textoElemento = elemento.options[elemento.selectedIndex].text;
+  
+  function seleccionaIndicador() {
+    elemento = document.getElementById("indicador");
+    valorElemento = elemento.options[elemento.selectedIndex].value;
+    textoElemento = elemento.options[elemento.selectedIndex].text;
+    cargarGrafico(valorElemento);
+  }
+  
+  async function cargarGrafico(valorElemento) {
+    let [fechas, valores] = await cargarIndicadores(valorElemento);
+    const grafico = document.getElementById("grafico");
+  
+  
+    if(miGrafico) {
+      miGrafico.destroy();
+    }
+  
+    miGrafico = new Chart(grafico, {
+      type: "line",
+      data: {
+        labels: fechas,
+        datasets: [
+          {
+            label: textoElemento,
+            data: valores,
+            backgroundColor: "rgb(75, 192, 192)",
+          },
+        ],
+      },
+    });
+  }
+  
+  cargarGrafico(valorElemento);
+  
+  document
+    .getElementById("indicador")
+    .addEventListener("change", seleccionaIndicador);
+  
+ 
 
 
 
-
-async function graficoIpc(){ 
-
-    await getIndicadorIpc()
-    const canvas = document.getElementById('IPC'); 
-    const graficoIpc = new Chart(canvas, { 
-        type: 'line', 
-        
-        data:{
-            labels: fechaIpcArray, 
-            datasets: [
-                {
-                    label: 'IPC', 
-                    data: valorIpcArray, 
-                    backgroundColor: 'rgb(75, 192, 192)',
-                },
-                
-            ]
-        },
-            
-    }) 
-
-}
-
-graficoIpc()

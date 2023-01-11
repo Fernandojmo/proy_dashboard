@@ -37,23 +37,10 @@
                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui oficia deserunt mollit anim id est laborum.</p>
-<!--
-            <div class="contenedor" >
-                <form action="" method="post">
-                    <div class="indicador">UF</div>                    
-                    <div class="indicador">UTM</div>
-                    <div class="indicador">DLO</div>
-                    <div class="indicador">DLA</div>
-                    <div class="indicador">EUR</div>
-                    <div class="indicador">IPC</div>
-                    <div class="indicador">IVP</div>
-                    <div class="indicador">IMACEC</div>                  
 
 
--->
-
-<div class="contenedor" >
-    <form action="" method="post">
+    <div class="contenedor" >
+     <form action="" method="post">
         <div class="indicador"> 
             UF                        
             <span id="uf" ></span>
@@ -87,35 +74,23 @@
             <span id="imacec"></span>
         </div>               
 
-                    <select name="select" id="combobox"  onchange="showChart()">
-                        <option value="">Seleccionar</option>
-                        <option value="uf1">UF</option>
-                        <option value="utm2">UTM</option>
-                        <option value="dlo3">DLO</option>
-                        <option value="dla4">DLA</option>
-                        <option value="eur5">EUR</option>
-                        <option value="ipc6">IPC</option>
-                        <option value="ivp7">IVP</option>
-                        <option value="imacec8">IMACEC</option>
-                    </select>
-                  
-                </form>                
-            </div>      
+        <select id="indicador" >
+            <option value="uf">UF</option>
+            <option value="ivp">IVP</option>
+            <option value="dolar">DOLAR</option>
+            <option value="euro">EURO</option>
+            <option value="ipc">IPC</option>
+            <option value="utm">UTM</option>
+          </select>
+        </form>                
+    </div>      
 
-            <div>
-                <canvas id="UF"  width="100"  height="40"></canvas>
-            </div>
 
-            <div>
-                <canvas id="UTM"  width="100"  height="40"></canvas>
-            </div>
+    <div class="chart-container" style="position: relative; height: 800px; width:900px">
+        <canvas id="grafico"></canvas>
+    </div>
 
-            <div>
-                <canvas id="IPC"  width="100"  height="40"></canvas>
-            </div>
-           
-           
-        </main>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./index.js" type="module"></script>
     <script src="./indicadores.js" type="module"></script>
