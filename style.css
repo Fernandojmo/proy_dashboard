@@ -109,21 +109,23 @@
 }
 
 
-#combobox{
+#indicador{
     display: inline-block;
-    width: 250px;
+    width: 120px;
     height: 30px;
-    background-color:#14B8A9 ;
+    background-color:#f4f7f6 ;
     border-radius: 0.75rem;
-    margin-left: 20rem;
+    margin-left: 35rem;
    
 }
 
-#enviar{
-    display: inline-block;
-    width: 100px;
-    height: 30px;
-    background-color: #14B8A9;
-    border-radius:1rem ;
-    margin-left: 1rem;
+
+.contenedor {
+    background: url("image.png") center center / cover no-repeat;
+    width: 1200px;
+    height: 400px;
+
 }
+
+
+

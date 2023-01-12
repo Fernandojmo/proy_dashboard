@@ -66,7 +66,7 @@ import { cargarIndicadores } from "./index.js";
           {
             label: textoElemento,
             data: valores,
-            backgroundColor: "rgb(75, 192, 192)",
+            backgroundColor: "rgb(65, 105, 225)",
           },
         ],
       },

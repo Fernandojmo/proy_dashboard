@@ -40,6 +40,8 @@
 
 
     <div class="contenedor" >
+       
+       
      <form action="" method="post">
         <div class="indicador"> 
             UF                        
@@ -75,18 +77,22 @@
         </div>               
 
         <select id="indicador" >
+            <option value="">Seleccionar</option>
             <option value="uf">UF</option>
             <option value="ivp">IVP</option>
             <option value="dolar">DOLAR</option>
             <option value="euro">EURO</option>
             <option value="ipc">IPC</option>
             <option value="utm">UTM</option>
+            <option value="imacec">IMACEC</option>
+            <option value="dolar_intercambio">DLO</option>
+            
           </select>
         </form>                
     </div>      
 
 
-    <div class="chart-container" style="position: relative; height: 800px; width:900px">
+    <div class="chart-container"  style="position: relative; height:80vh; width:150vw">
         <canvas id="grafico"></canvas>
     </div>
 
