@@ -1,15 +1,55 @@
 
-// import indexs from './modulo.js'
-// indexs();
+import indexs from './modulo.js'
+indexs();
 
-// import grafico from './graph.js'
-// grafico('uf');
+import grafico from './graph.js'
+grafico('uf');
 
-import * as moment from './node_modules/moment/dist/moment.js'
+// const comboboxEL = document.getElementById('combobox')
+// comboboxEL.addEventListener('change',cambiar())
 
-const nueva= (moment.moment().format('YYYY-MM-DD') + "T00:00:00.000Z");
-console.log(nueva)
-console.log(moment(nueva).format('YYYY/MM/DD'))
+    let elemento = document.getElementById("combobox");
+    let valorElemento = elemento.options[elemento.selectedIndex].value;
+    let textoElemento = elemento.options[elemento.selectedIndex].text;
+
+function seleccionaIndicador() {
+    elemento = document.getElementById("combobox");
+    valorElemento = elemento.options[elemento.selectedIndex].value;
+    textoElemento = elemento.options[elemento.selectedIndex].text;
+    const nuevograph = document.getElementById("graphbox");
+    nuevograph.setAttribute("id","graphbox")
+    nuevograph.innerHTML=``
+    nuevograph.innerHTML=`
+    <div>
+        <canvas id="mychart"></canvas>
+    </div>`
+    console.log(valorElemento);
+    grafico(valorElemento);
+  }
+
+  document
+    .getElementById("combobox")
+    .addEventListener("change",seleccionaIndicador);
+
+// const father=document.getElementById('selectform')
+// function pintarform(){
+//     const form = document.createElement("form")
+//     form.setAttribute("id","comboboxfather")
+//     form.innerHTML=`
+//         <select name="" id="combobox" onchange="">
+//             <option value="uf">UF</option>
+//             <option value="utm">UTM</option>
+//             <option value="ipc">IPC</option>
+//             <option value="dolar">Dolar</option>
+//             <option value="euro">Euro</option>
+//             <option value="imacec">IMACEC</option>
+//         </select>
+//         <button id="searchbtn" onclick="cambiar()">Serch</button>`
+// father.appendChild(form);
+// }
+// pintarform();
+
+
 
 // async function grafico(indicador) {
 //     try {
