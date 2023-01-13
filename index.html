@@ -1,104 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="Chart.js"> </script>
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/7b6f222f8f.js" crossorigin="anonymous"></script>
 </head>
-<body>    
-        <header>
-            <nav id="navlight">
-                <div class="container-fluid">
-                    <div id="div-black"></div>
-                    <div id="div-violet"></div>
-                    <div id="div-lightblue"></div>
-                    <div id="div-calypso"></div>
-                    <div id="div-green"></div>
-                    <div id="div-yellow"></div>
-                </div>
 
-            </nav>
-            <nav  id="navdark">
-                <div class="container-fluid" id="navtext">
-                    <span class="navbar-text">
+<body>
+    <header>
+
+        <nav id="navlight">
+            <div class="container-fluid">
+                <div id="div-black"></div>
+                <div id="div-violet"></div>
+                <div id="div-lightblue"></div>
+                <div id="div-calypso"></div>
+                <div id="div-green"></div>
+                <div id="div-yellow"></div>
+            </div>
+        </nav>
+
+
+
+        <nav id="navdark">
+            <div class="container-fluid" id="navtext">
+                <span class="navbar-text">
                     Indicadores Económicos Chile
-                    </span>
-                </div>
-            </nav>
-        </header>
+                </span>
+            </div>
+        </nav>
+    </header>
 
-        <main>
+
+
+    <div class="contenedor">
+        <div class="row">
+            <div class="col-l12">
                 <p id="paragraph-one">A continuación se describen los principales indicadores económicos: </p>
-                <p id="paragraph-two">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                 et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui oficia deserunt mollit anim id est laborum.</p>
+                <p id="paragraph-two">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt
+                    ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip
+                    ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui oficia deserunt mollit anim id est
+                    laborum.</p>
+            </div>
+        </div>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="row">
+            <div class="col-l12">  
+                <div class="indicador"><H6>UF</H6>
+                    <i class="fa fa-usd"><span  id="uf"></span></i>
+                </div>
+                <div class="indicador"><h6>UTM</h6>
+                    <i class="fa fa-usd"><span id="utm"></span></i>
+                    </div>
+                <div class="indicador"><h6>DLO</h6>
+                    <i class="fa fa-usd"><span id="dolar_intercambio"></span></i>
+                </div>
+                <div class="indicador"><h6>DLA</h6>
+                    <i class="fa fa-usd"><span id="dolar"></span></i>
+                </div>
+            </div>
+        </div>
 
 
-    <div class="contenedor" >
-       
-       
-     <form action="" method="post">
-        <div class="indicador"> 
-            UF                        
-            <span id="uf" ></span>
-        </div>                    
-        <div  class="indicador">
-            UTM
-            <span id="utm"></span>
+        <div class="row">
+            <div class="col-l12">
+                <div class="indicador"><h6>EUR</h6>
+                    <i class="fa fa-usd"><span id="euro"></span></i>
+                </div>
+                <div class="indicador"><h6>IPC</h6> 
+                    <i class="fa fa-usd"><span id="ipc"></span></i>
+                </div>
+                <div class="indicador"><h6>IVP</h6>
+                    <i class="fa fa-usd"><span id="ivp"></span></i>
+                </div>
+                <div class="indicador"><h6>IMACEC</h6>
+                    <i class="fa fa-usd"><span id="imacec"></span></i>
+                </div>
+            </div>
         </div>
-        <div  class="indicador">
-            DLO
-            <span id="dolar_intercambio"></span>
-        </div>
-        <div  class="indicador">
-            DLA
-            <span id="dolar"></span>
-        </div>
-        <div  class="indicador">
-            EUR
-            <span id="euro"></span>
-        </div>
-        <div  class="indicador">
-            IPC
-            <span id="ipc"></span>
-        </div>
-        <div  class="indicador">
-            IVP
-            <span id="ivp"></span>
-        </div>
-        <div  class="indicador">
-            IMACEC
-            <span id="imacec"></span>
-        </div>               
+    </div>
 
-        <select id="indicador" >
-            <option value="">Seleccionar</option>
-            <option value="uf">UF</option>
-            <option value="ivp">IVP</option>
-            <option value="dolar">DOLAR</option>
-            <option value="euro">EURO</option>
-            <option value="ipc">IPC</option>
-            <option value="utm">UTM</option>
-            <option value="imacec">IMACEC</option>
-            <option value="dolar_intercambio">DLO</option>
-            
-          </select>
-        </form>                
-    </div>      
+        <div class="row">
+            <div class="col-l12">
+                <select id="indicador">
+                    <option value="">Seleccionar</option>
+                    <option value="uf">UF</option>
+                    <option value="ivp">IVP</option>
+                    <option value="dolar">DOLAR</option>
+                    <option value="euro">EURO</option>
+                    <option value="ipc">IPC</option>
+                    <option value="utm">UTM</option>
+                    <option value="imacec">IMACEC</option>
+                    <option value="dolar_intercambio">DLO</option>
+                </select>
+            </div>
+        </div>
+    
 
 
-    <div class="chart-container"  style="position: relative; height:80vh; width:150vw">
+    <div class="chart-container" style="position: relative; height:80vh; width:150vw">
         <canvas id="grafico"></canvas>
     </div>
 
-    </main>
+
+    <footer class="footer">
+        <div class="contenedor2">
+          <div class="fila"> <!-- Fila -->
+            <div class="footer-col">
+              
+              <h6>Desarrollado por Marta Nicoli</h6>
+           
+          
+            <div class="footer-col last-footer-col"> 
+               <span class="redsocial"><a href="#"><i class="fab fa-instagram"  id="instagram" style="color: white"></i></a></span>
+               <span class="redsocial"><a href="#"><i class="fab fa-twitter"  id="twitter" style="color: white"></i></a></span>
+               <span class="redsocial"><a href="#"><i class="fab fa-facebook-f"  id="facebook" style="color: white"></i></a></span 
+            </div>
+    
+            </div>
+        </div>
+    </div>  
+     </footer>
+    
+    
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./index.js" type="module"></script>
     <script src="./indicadores.js" type="module"></script>
 </body>
+
 </html>

@@ -10,7 +10,7 @@ async function cargarIndicadores(valorElemento){
   const response = await fetch(url);
   const data = await response.json();
 
-  const fechasArray = data.serie.map(d => new Date (d.fecha).toLocaleDateString());;
+  const fechasArray = data.serie.map(d => new Date (d.fecha).toLocaleDateString());
   const valoresArray = data.serie.map(d => d.valor);
 
   return [fechasArray.reverse(), valoresArray.reverse()];

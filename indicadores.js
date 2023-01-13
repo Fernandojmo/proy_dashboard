@@ -1,6 +1,4 @@
-/*import {getIndicadorUf, fechaArray, valorArray} from "./index.js";
-import {getIndicadorUtm, fechaUtmArray, valorUtmArray} from "./index.js"; 
-import {getIndicadorIpc, fechaIpcArray, valorIpcArray} from "./index.js";*/
+
 import {getIndicadores, indicators_map} from "./index.js"; 
 
 
@@ -66,7 +64,7 @@ import { cargarIndicadores } from "./index.js";
           {
             label: textoElemento,
             data: valores,
-            backgroundColor: "rgb(65, 105, 225)",
+            backgroundColor: "rgb(12, 12, 95)",
           },
         ],
       },

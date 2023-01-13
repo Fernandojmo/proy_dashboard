@@ -1,4 +1,10 @@
 /*barra navegacion clara*/
+body{
+/*display: inline-block;*/
+width: 1500px;
+overflow-x: hidden;
+
+}
 
 
 #navlight{
@@ -6,53 +12,60 @@
     background-color: white;
     height:50px ;
     padding:10px;
+    display:inline-block;
 }
 
 #div-black{
-
+    background-color: #020239;
     width: 30px;
     height:30px;
-    background-color: #000080;
     display:inline-block;
 }
 
 #div-violet{
+    background-color: #6105A0;
     width: 30px;
     height:30px;
-    background-color: #6105A0;
     display:inline-block;
 }
 
 #div-lightblue{
+   
+    background-color: #1459B8;
     width: 30px;
     height:30px;
-    background-color: #1459B8;
     display:inline-block;
+ 
 }
 
 #div-calypso{
+  
+    background-color: #14B8A9;
     width: 30px;
     height:30px;
-    background-color: #14B8A9;
     display:inline-block;
+  
 }
 #div-green{
-    width: 30px;
-    height:30px;
     background-color: #21A96B;
-    display:inline-block;
-}
-#div-yellow{
     width: 30px;
     height:30px;
-    background-color: #F6CC0E ;
     display:inline-block;
 }
 
+#div-yellow{
+    background-color: #F6CC0E ;
+    width: 30px;
+    height:30px;
+    display:inline-block;
+}
+
+
 /*barra navegacion oscura */
 #navdark{
-    background-color: #000080;
+    background-color: #020239;
     height:100px;
+    width: 1263px;
     border: 2px solid red;
     padding: 10px;
     
@@ -62,52 +75,62 @@
     padding: 1rem;
     text-align: center;
     color: #F6CC0E;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: Arial, Helvetica, sans-serif;
-    
-    
+
 }
 
 #paragraph-one{
-    color: #160456;
+    color: rgb(0, 0, 0);
     font-size: 1.5rem;
     margin: 10px;
     padding: 10px;
     display: inline-block;
+    width: 1200px;
 }
+
 #paragraph-two{
+    color: rgb(0, 0, 0);
     font-size: 1rem;
     margin: 10px;
     padding: 10px;
+    width: 1200px;
 
 }
 
-.contenedor{
-    display: flex;
+.contenedor{   
+    display: inline-block;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content:center;
     padding: 1rem;
-    background-color: #F6CC0E;
-
+    text-align: justify;
     
+   
 }
+
+.jumbotron{
+    background: url("image.jpg") no-repeat; 
+    background-position:100%
+  
+  }
 
 .indicador{
     display: inline-block;
     width: 200px;
     height: 100px;
-    color: black;
-    padding-left: 5rem;
+    color: white;
+    padding-left: 4rem;
     padding-top: 1rem;
-    padding-right: 5rem;    
+    padding-right: 4rem;    
     padding-bottom: 1rem;
     margin: 2rem; 
-    background-color:#1459B8 ;
-    text-align: center;
-    border-radius: 1rem;
+    background-color: rgba(101, 101, 174, 0.605);
+    text-align: justify;
+    border-radius: 1rem;   
+    box-shadow: 6px 20px 10px rgb(68, 58, 99)
+    
 }
-
 
 #indicador{
     display: inline-block;
@@ -115,17 +138,56 @@
     height: 30px;
     background-color:#f4f7f6 ;
     border-radius: 0.75rem;
-    margin-left: 35rem;
+    margin-left: 5rem;
+    
    
 }
 
-
-.contenedor {
-    background: url("image.png") center center / cover no-repeat;
-    width: 1200px;
-    height: 400px;
-
+#grafico{
+  display: flex;
+  margin: 120px;
 }
 
+/*footer*/
+.contenedor2 {
+    background-color: #302c30;
+    }
+    
+    
+    /*define color de titulos en blanco*/
+    .footer-col h6 {
+        font-size: 1 rem;
+        color: aliceblue;
+        text-transform: none;/*deja lsolo las palabras escritas con mayuscula*/
+        margin-bottom: 2 rem;
+        font-weight: 500;
+        position: relative;         
+    }
+      
+    /*hover: cambia de color al posicionar el mouse en el icono*/
+    .footer-col .redsocial:hover{
+        background-color:#f5e6e6;
+        }
+        
+        #instagram{
+            margin-left: 0.5rem;    
+        }
+        #twitter{
+            margin-left: 0.5rem;    
+        }
+        #facebook{
+            margin-left: 0.5rem;    
+        }
+        
+        .redsocial {
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        margin:0 1.6rem 1.6rem 0;
+        line-height: 2rem;/*interlineado*/
+        border-radius: 60%;/* entre mas porcentaje mas redondo el radio*/
+        transition: all 0.5s ease;
+        padding-left: 10 rem;
+        }
 
 
