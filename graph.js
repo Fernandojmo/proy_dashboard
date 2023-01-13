@@ -1,21 +1,14 @@
-
-
 async function grafico(indicador) {
     try {
 
         const url = `https://mindicador.cl/api/${indicador}`;
         const response = await fetch(url);
         const index = await response.json();
-        // console.log(index);
-        // console.log("fetch exitoso");
         const fechas = await index.serie.map(x=>new Date (x.fecha).toLocaleDateString())
-        // const fechas = await index.serie.map(x=> moment(x.fecha).format('YYYY/MM/DD'))
         const valores = await index.serie.map(x=>x.valor)
         const valoresinv= await valores.reverse();
         const fechasinv= await fechas.reverse();
-        // const fechascorr= await fechas.map(x=> x);
-        // console.log("aqui valores:");
-        // console.log(fechas);
+
 
         const canvas = await document.getElementById('mychart')        
         const grafico1 = await new Chart(canvas,{
@@ -52,5 +45,5 @@ async function grafico(indicador) {
     }
   }
 
-// grafico('uf');
+
 export default grafico;

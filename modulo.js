@@ -19,7 +19,7 @@ async function indicadores() {
       ufelement.innerHTML = `
           <div class="logo"></div>
           <div class="titulo">
-            <p>${data.uf.codigo}</p>
+            <p>${data.uf.nombre}</p>
           </div>
           <div class="valor">
             <p>${data.uf.valor}</p>
@@ -28,7 +28,7 @@ async function indicadores() {
       ivpelement.innerHTML = `
           <div class="logo"></div>
           <div class="titulo">
-            <p>${data.ivp.codigo}</p>
+            <p>${data.ivp.nombre}</p>
           </div>
           <div class="valor">
             <p>${data.ivp.valor}</p>
@@ -37,7 +37,7 @@ async function indicadores() {
       dolarelement.innerHTML = `
           <div class="logo"></div>
           <div class="titulo">
-            <p>${data.dolar.codigo}</p>
+            <p>${data.dolar.nombre}</p>
           </div>
           <div class="valor">
             <p>${data.dolar.valor}</p>
@@ -55,7 +55,7 @@ async function indicadores() {
       euroelement.innerHTML = `
           <div class="logo"></div>
           <div class="titulo">
-            <p>${data.euro.codigo}</p>
+            <p>${data.euro.nombre}</p>
           </div>
           <div class="valor">
             <p>${data.euro.valor}</p>
@@ -64,7 +64,7 @@ async function indicadores() {
       ipcelement.innerHTML = `
           <div class="logo"></div>
           <div class="titulo">
-            <p>${data.ipc.codigo}</p>
+            <p>${data.ipc.nombre}</p>
           </div>
           <div class="valor">
             <p>${data.ipc.valor}</p>
@@ -73,7 +73,7 @@ async function indicadores() {
       utmelement.innerHTML = `
           <div class="logo"></div>
           <div class="titulo">
-            <p>${data.utm.codigo}</p>
+            <p>${data.utm.nombre}</p>
           </div>
           <div class="valor">
             <p>${data.utm.valor}</p>
@@ -82,7 +82,7 @@ async function indicadores() {
       imacecelement.innerHTML = `
           <div class="logo"></div>
           <div class="titulo">
-            <p>${data.imacec.codigo}</p>
+            <p>${data.imacec.nombre}</p>
           </div>
           <div class="valor">
             <p>${data.imacec.valor}</p>

@@ -27,7 +27,10 @@
     text-align: justify;
   }
   #list1 {
-    background-color: aqua;
+    background-image:url(./assets/images/foto.jpg);
+    background-size:cover;
+    background-position: 0%;
+
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -36,8 +39,21 @@
   }
   .box {
     padding: 1rem;
-    background-color: blue;
+    background-color: #0b0f2c;
     width: 30%;
+    opacity: 95%;
+
+    -webkit-box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 1);
+
+    border-radius: 10px 10px 10px 10px;
+  }
+  .box > div > p {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 800;
+    
   }
   
   .box {
@@ -67,9 +83,6 @@
     width: 20rem;
     min-width: 10rem;
   }
-  #selectform > form > button {
-    width: 5rem;
-  }
   #graphsection {
     /* background-color: darkcyan; */
     text-align: center;
@@ -77,11 +90,12 @@
   }
   #graphtitle {
     padding: 1rem;
+    font-size: 2rem;
   }
   #graphbox {
     
     /* background-color: darkred; */
-    padding: 10rem;
+    padding: 1rem;
     margin: 1rem;
   }
   #footer {
@@ -89,3 +103,8 @@
     background-color: darksalmon;
   }
   
+  @media only screen and (max-width: 740px) {
+    .box {
+      width: 90%;
+    }
+  }
