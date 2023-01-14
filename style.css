@@ -135,9 +135,12 @@
   #footer {
     padding: 4rem;
     background-color: #0b0f2c;
+    text-align: center;
   }
   
-
+  #footer > p {
+    color: aliceblue;
+  }
   @media only screen and (min-width: 400px ) {
     .chart-container{
       height: 700px;
