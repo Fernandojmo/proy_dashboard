@@ -17,7 +17,9 @@ async function indicadores() {
       //const ufelement = document.createElement("div");
       //ufelement.setAttribute("class","box");
       ufelement.innerHTML = `
-          <div class="logo"></div>
+          <div class="logo">
+              <img src="./assets/images/dls.png" alt"divisa">
+          </div>
           <div class="titulo">
             <p>${data.uf.nombre}</p>
           </div>
@@ -26,7 +28,9 @@ async function indicadores() {
           </div>`;
   
       ivpelement.innerHTML = `
-          <div class="logo"></div>
+          <div class="logo">
+            <img src="./assets/images/dls.png" alt"divisa">
+          </div>
           <div class="titulo">
             <p>${data.ivp.nombre}</p>
           </div>
@@ -35,7 +39,9 @@ async function indicadores() {
           </div>`;
   
       dolarelement.innerHTML = `
-          <div class="logo"></div>
+          <div class="logo">
+            <img src="./assets/images/dls.png" alt"divisa">
+          </div>
           <div class="titulo">
             <p>${data.dolar.nombre}</p>
           </div>
@@ -44,7 +50,9 @@ async function indicadores() {
           </div>`;
   
       dolarintercambioelement.innerHTML = `
-          <div class="logo"></div>
+          <div class="logo">
+            <img src="./assets/images/dls.png" alt"divisa">
+          </div>
           <div class="titulo">
             <p>${data.dolar_intercambio.nombre}</p>
           </div>
@@ -53,7 +61,9 @@ async function indicadores() {
           </div>`;
           
       euroelement.innerHTML = `
-          <div class="logo"></div>
+          <div class="logo">
+            <img src="./assets/images/dls.png" alt"divisa">
+          </div>
           <div class="titulo">
             <p>${data.euro.nombre}</p>
           </div>
@@ -62,7 +72,9 @@ async function indicadores() {
           </div>`;
   
       ipcelement.innerHTML = `
-          <div class="logo"></div>
+          <div class="logo">
+            <img src="./assets/images/pr.png" alt"divisa">
+          </div>
           <div class="titulo">
             <p>${data.ipc.nombre}</p>
           </div>
@@ -71,7 +83,9 @@ async function indicadores() {
           </div>`;
       
       utmelement.innerHTML = `
-          <div class="logo"></div>
+          <div class="logo">
+            <img src="./assets/images/dls.png" alt"divisa">
+          </div>
           <div class="titulo">
             <p>${data.utm.nombre}</p>
           </div>
@@ -80,7 +94,9 @@ async function indicadores() {
           </div>`;
       
       imacecelement.innerHTML = `
-          <div class="logo"></div>
+          <div class="logo">
+            <img src="./assets/images/pr.png" alt"divisa">
+          </div>
           <div class="titulo">
             <p>${data.imacec.nombre}</p>
           </div>

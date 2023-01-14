@@ -31,6 +31,7 @@ async function grafico(indicador) {
                 ]
             },
             options: {
+                maintainAspectRatio: false,
                 scales: {
                     y: {
                         beginAtZero: false
