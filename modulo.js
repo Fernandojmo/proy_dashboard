@@ -3,8 +3,7 @@ async function indicadores() {
       const url = "https://mindicador.cl/api";
       const response = await fetch(url);
       const data = await response.json();
-      // console.log(data);
-      // console.log("fetch exitoso");
+
       const ufelement = document.getElementById("ufbox");
       const ivpelement = document.getElementById("ivpbox");
       const dolarelement = document.getElementById("dolarbox");
@@ -14,8 +13,6 @@ async function indicadores() {
       const utmelement = document.getElementById("utmbox");
       const imacecelement = document.getElementById("imacecbox");
   
-      //const ufelement = document.createElement("div");
-      //ufelement.setAttribute("class","box");
       ufelement.innerHTML = `
           <div class="logo">
               <img src="./assets/images/dls.png" alt"divisa">

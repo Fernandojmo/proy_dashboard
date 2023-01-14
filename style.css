@@ -18,7 +18,6 @@
   }
   #intro {
     padding: 2rem;
-    /* background-color: greenyellow; */
   }
   #intro > h2 {
     font-size: 3rem;
@@ -41,8 +40,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: auto; */
-   /* background-color: #ffc04a; */
    overflow: hidden; 
 
   }
@@ -56,7 +53,6 @@
   }
   .valor{
     text-align: center;
-    /* justify-content: baseline; */
   }
 
 
@@ -120,7 +116,6 @@
     
   }
   #graphsection {
-    /* background-color: darkcyan; */
     text-align: center;
     padding: 1rem;
   }
@@ -129,8 +124,6 @@
     font-size: 2rem;
   }
   #graphbox {
-    
-    /* background-color: darkred; */
     padding: 1rem;
     margin: 1rem;
   }
@@ -146,7 +139,6 @@
   @media only screen and (min-width: 400px ) {
     .chart-container{
       height: 700px;
-      /* background-color:#3e4891 ; */
       align-self: center;
       margin: auto;
     }
@@ -169,15 +161,12 @@
     #graphbox{
       padding: 0;
       margin: 0 ;
-      /* justify-content: center;
-      justify-items: center; */
       justify-self: center;
     }
 
    .chart-container{
       height: 400px;
       width: 350px;
-      /* background-color: #ffc04a; */
       align-self: center;
       margin: auto;
     }
@@ -188,13 +177,10 @@
     #graphbox{
       padding: 0;
       margin: 0 ;
-
-      /* background-color: #0b0f2c; */
     }
       .chart-container{
       height: 400px;
       width: 250px;
-      /* background-color: #ffc04a; */
       margin: auto;
     }
   }
