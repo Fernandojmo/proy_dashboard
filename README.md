@@ -6,7 +6,7 @@
 	Index.html: Archivo base html.
 	Style.css: Archivo base css con selectores.
 	Index.js: Archivo base de javascript en donde se importan los módulos correspondientes.
-	Modulo.js: Archivo javascript en donde se requiere mediante una petición fetch la información a la api y gestiona los indicadores fijos en la parte superior de la página.
+	Modulo.js: Archivo javascript en donde se requiere mediante una petición fetch, async y await, a la información de la api y gestiona los indicadores fijos en la parte superior de la página.
 	Graph.js: archivo javascript en donde se gestiona la información de la api y crea el grafico indicado en el combobox.
 	Package.json y package-lock.json: información node javascript.
 	.gitattributes y .gitignore: información github.
